@@ -1,1 +1,37 @@
 round,slice,frame,object_ref,cell,what,why,severity,owner,rule_id,evidence,action,rules_version,note
+calib,C0,adasind_019560.jpg,L2,na,SPURIOUS,E1_annotator_error,P2,annotator,R01,Vật thể nhỏ xa dưới ngưỡng 40px,keep_with_reason,v1.0.0,Phát hiện thừa do ước lượng sai chiều cao
+calib,C0,adasind_019560.jpg,L4+R3,na,WRONG_CLASS,E1_annotator_error,P1,annotator,R01,Nhầm lẫn giữa Bike và Pedestrian ở cự ly xa,rework,v1.0.0,Cần sửa đúng class theo người lái xe
+calib,C0,adasind_019560.jpg,L6,na,SPURIOUS,E1_annotator_error,P2,annotator,R01,Box thừa ở vùng mép kính,keep_with_reason,v1.0.0,Biến dạng quang học gây hiểu nhầm
+calib,C0,adasind_019560.jpg,L8,na,SPURIOUS,E1_annotator_error,P2,annotator,R01,Box thừa ở vùng mid,keep_with_reason,v1.0.0,Vật thể tĩnh nhầm thành động
+calib,C0,adasind_019560.jpg,L9+R5,na,BOX_GEOMETRY,E1_annotator_error,P2,annotator,R03,Box vẽ lỏng không ôm sát viền xe,keep_with_reason,v1.0.0,Cần bo sát hình học trên ảnh gốc
+r2_qa,B4-mid,adasind_261480.jpg,L7,L_only,ATTRIBUTE,,,qa,R04,Chạm viền ảnh trái x=0 nhưng thuộc tính truncated chưa bật,rework,v1.0.0,Kiểm tra lại cờ truncated khi vật thể chạm viền ảnh
+r2_qa,B4-mid,adasind_261480.jpg,L8,L_only,DUPLICATE,,,qa,R08,Vùng overlap lớn với L7 Bike cần xác minh hai xe hay một,rework,v1.0.0,Xác nhận hai phương tiện riêng biệt
+r2_qa,B4-mid,adasind_265065.jpg,L4,L_only,BOX_GEOMETRY,,,qa,R03,Chiều cao 43.8px sát ngưỡng H=40px cần rà soát mép dưới,keep_with_reason,v1.0.0,Box ôm đúng bánh xe chạm đất
+r2_qa,B4-mid,adasind_249480.jpg,L2,L_only,WRONG_CLASS,,,qa,R01,Phương tiện thùng kín phía xa cần phân định Truck hay SpecialVehicle,keep_with_reason,v1.0.0,Kiểm tra đặc điểm hình học cabin và thùng xe
+r1_craft,B4-mid,adasind_261480.jpg,L7+R2,na,ATTRIBUTE,E1_annotator_error,P2,annotator,R04,Thuộc tính truncated chưa khớp với reference,rework,v1.0.0,Cần cập nhật truncated=true
+r1_craft,B4-mid,adasind_261480.jpg,L1+R6,na,WRONG_CLASS,E1_annotator_error,P1,annotator,R01,Nhãn Car nhầm với ThreeWheeler,rework,v1.0.0,Đổi nhãn thành ThreeWheeler
+r1_craft,B4-mid,adasind_261480.jpg,L8,na,SPURIOUS,E1_annotator_error,P2,annotator,R08,Vẽ trùng box phương tiện hai bánh,rework,v1.0.0,Xóa box trùng lặp
+r1_craft,B4-mid,adasind_265065.jpg,L2+R3,na,WRONG_CLASS,E1_annotator_error,P1,annotator,R01,Nhãn Car nhầm với ThreeWheeler,rework,v1.0.0,Đổi nhãn sang ThreeWheeler
+r1_craft,B4-mid,adasind_265065.jpg,L5,na,SPURIOUS,E1_annotator_error,P2,annotator,R01,Người đi bộ xa dưới 40px,rework,v1.0.0,Xóa box dưới ngưỡng
+r1_craft,B4-mid,adasind_265065.jpg,L6,na,SPURIOUS,E1_annotator_error,P2,annotator,R01,Xe máy nhỏ xa dưới 40px,rework,v1.0.0,Xóa box dưới ngưỡng
+r1_craft,B4-mid,adasind_265065.jpg,R7,na,MISSING,E1_annotator_error,P1,annotator,R01,Bỏ sót người đi bộ bên phải,rework,v1.0.0,Bổ sung box Pedestrian
+r3_diag,B4-mid,adasind_249480.jpg,M2,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R01,Model dự đoán nhầm vật thể ảo ở vùng biên,keep_with_reason,v1.0.0,Lỗi lệch miền dữ liệu của mô hình
+r3_diag,B4-mid,adasind_249480.jpg,M4,M_only,SPURIOUS,E4_model_domain,P3,ai_team,R01,Nhiễu bóng đổ trên mặt đường bị model nhầm thành xe,keep_with_reason,v1.0.0,Mô hình phát hiện sai box rác
+r3_diag,B4-mid,adasind_249480.jpg,M6,M_only,SPURIOUS,E4_model_domain,P3,ai_team,R01,Box model lệch biến dạng quang học méo ở rìa,keep_with_reason,v1.0.0,Lỗi mô hình trên ảnh fisheye
+r3_diag,B4-mid,adasind_261480.jpg,L6+R4,LR_noM,MISSING,E4_model_domain,P2,ai_team,R01,Model bỏ sót ThreeWheeler ở cự ly trung bình,keep_with_reason,v1.0.0,Người và reference đều có chỉ model bỏ sót
+r3_diag,B4-mid,adasind_261480.jpg,L2+R5,LR_noM,MISSING,E4_model_domain,P2,ai_team,R01,Model bỏ sót xe ThreeWheeler bị che khuất nửa thân,keep_with_reason,v1.0.0,Model không nhận diện được xe ba bánh che khuất
+r3_diag,B4-mid,adasind_261480.jpg,L1+M6,LM_noR,SPURIOUS,E0_reference_defect,P1,qa,R01,Cả người và model đều thấy ô tô nhưng reference bỏ sót,escalate,v1.0.0,Đề xuất bổ sung đối tượng vào reference
+r3_diag,B4-mid,adasind_261480.jpg,L8+M11,LM_noR,SPURIOUS,E2_guideline_gap,P1,guideline,R08,Xe máy đi sát phía sau được người và model bắt nhưng R bỏ qua,escalate,v1.0.0,Làm rõ quy tắc tách hai phương tiện bám đuôi
+r3_diag,B4-mid,adasind_261480.jpg,R6,R_only,MISSING,E1_annotator_error,P1,annotator,R01,Người bỏ sót phương tiện ở vùng mid trên reference,rework,v1.0.0,Cần bổ sung box trong phiên sửa nhãn
+r3_diag,B4-mid,adasind_261480.jpg,M2,M_only,SPURIOUS,E4_model_domain,P3,ai_team,R01,Mô hình dự đoán thừa box ở góc trái,keep_with_reason,v1.0.0,Lỗi domain mô hình YOLO26m
+r3_diag,B4-mid,adasind_261480.jpg,M5,M_only,SPURIOUS,E4_model_domain,P3,ai_team,R01,Mô hình tạo box thừa ở dải phân cách,keep_with_reason,v1.0.0,Lỗi nhận diện kết cấu tĩnh
+r3_diag,B4-mid,adasind_261480.jpg,M8,M_only,SPURIOUS,E4_model_domain,P3,ai_team,R01,Mô hình tạo box trùng lặp danh tính xe,keep_with_reason,v1.0.0,Lỗi trùng box của mô hình
+r3_diag,B4-mid,adasind_261480.jpg,M10,M_only,SPURIOUS,E4_model_domain,P3,ai_team,R01,Mô hình sinh box rác do biến dạng fisheye,keep_with_reason,v1.0.0,Nhiễu quang học rìa
+r3_diag,B4-mid,adasind_261480.jpg,M12,M_only,SPURIOUS,E4_model_domain,P3,ai_team,R01,Mô hình dự đoán box ngoài phạm vi,keep_with_reason,v1.0.0,Sai số phát hiện đối tượng
+r3_diag,B4-mid,adasind_261480.jpg,M13,M_only,SPURIOUS,E4_model_domain,P3,ai_team,R01,Mô hình dự đoán thừa box xe máy nhỏ,keep_with_reason,v1.0.0,Lỗi phát hiện sai của AI
+r3_diag,B4-mid,adasind_265065.jpg,L2,L_only,SPURIOUS,E1_annotator_error,P1,annotator,R01,Box Car bị sai lệch class hoặc dư thừa so với R,rework,v1.0.0,Điều chỉnh lại class Car thành ThreeWheeler theo R
+r3_diag,B4-mid,adasind_265065.jpg,L5,L_only,SPURIOUS,E1_annotator_error,P1,annotator,R01,Người đi bộ ở xa chiều cao dưới ngưỡng H40,rework,v1.0.0,Xóa box dư thừa vi phạm ngưỡng chiều cao H40
+r3_diag,B4-mid,adasind_265065.jpg,L6,L_only,SPURIOUS,E1_annotator_error,P1,annotator,R01,Box Bike ở xa dưới ngưỡng chiều cao quy định,rework,v1.0.0,Xóa box Bike nhỏ hơn ngưỡng 40px
+r3_diag,B4-mid,adasind_265065.jpg,R3+M1,RM_noL,MISSING,E1_annotator_error,P1,annotator,R01,Người bỏ sót xe ThreeWheeler mà cả R và M đều có,rework,v1.0.0,Bổ sung box ThreeWheeler còn thiếu
+r3_diag,B4-mid,adasind_265065.jpg,R7,R_only,MISSING,E1_annotator_error,P1,annotator,R01,Người bỏ sót đối tượng Pedestrian ở mép phải,rework,v1.0.0,Bổ sung box Pedestrian theo reference
+r3_diag,B4-mid,adasind_265065.jpg,M7,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R01,Mô hình sinh box ảo ở rìa ảnh bên phải,keep_with_reason,v1.0.0,Lỗi ảo giác mô hình ở rìa fisheye

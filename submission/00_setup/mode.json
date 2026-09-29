@@ -1,0 +1,19 @@
+{
+  "members": [
+    "tuan"
+  ],
+  "assignments": {
+    "tuan": "B4-mid"
+  },
+  "self": "tuan",
+  "slice": "B4-mid",
+  "degrade": [
+    "k12"
+  ],
+  "current_slice": "B4-mid",
+  "support_prefill": false,
+  "support_slice": "",
+  "prefill_box_ids": [
+    "adasind_249480.jpg:1"
+  ]
+}

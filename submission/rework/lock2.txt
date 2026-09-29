@@ -1,0 +1,9 @@
+round: rework
+slice: B4-mid
+sha256: a09bcf648fcb1111cbadf144ed239bad7f71cce1b457fc83777917356a5eb83f
+code: A09B-CF64
+locked_at: 2026-09-29T11:32:37+07:00
+shapes: box=23, polygon=9
+prefill_kept: 0
+prefill_edited: 1
+new: 22

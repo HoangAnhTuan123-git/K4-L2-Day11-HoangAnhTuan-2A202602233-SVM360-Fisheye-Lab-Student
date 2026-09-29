@@ -1,9 +1,9 @@
 camera_id,slice_type,frames,risk,rationale
-front,normal,,TODO,TODO
-front,hard,,TODO,TODO
-rear,normal,,TODO,TODO
-rear,hard,,TODO,TODO
-left,normal,,TODO,TODO
-left,hard,,TODO,TODO
-right,normal,,TODO,TODO
-right,hard,,TODO,TODO
+front,normal,35,Bỏ sót vật thể nhỏ ở cự ly xa hoặc nhầm lẫn class khi vật thể đối diện di chuyển nhanh,Khung cảnh lái xe thẳng thông thường; làm đường cơ sở đánh giá độ chính xác nhận diện vật thể phía trước
+front,hard,25,Chói sáng ngược nắng gay gắt vật thể cắt đầu xe đột ngột biến dạng mép kính khi xe rẽ gắt,Vùng an toàn va chạm trọng yếu nhất; cần tỷ lệ ca khó cao để bảo đảm an toàn phanh khẩn cấp
+rear,normal,30,Ước lượng sai khoảng cách xe bám đuôi hoặc vật cản tĩnh khi lùi xe tốc độ thấp,Đường cơ sở cho chức năng camera lùi và giám sát dòng phương tiện bám đuôi
+rear,hard,20,Điểm mù sát cản sau chói đèn pha xe sau ban đêm vật cản thấp sát mặt đất như gờ đá/trẻ nhỏ,Khu vực rủi ro va chạm cao khi đỗ xe lùi chuồng cần tập trung kiểm định ranh giới dưới
+left,normal,25,Biến dạng mép sườn xe làm sai lệch kích thước phương tiện song song,Đường cơ sở quan sát làn bên trái phục vụ ghép ảnh toàn cảnh BEV và chuyển làn
+left,hard,20,Xe hai bánh luồn lách sát gương chiếu hậu biến dạng cong cực đại tại seam nối camera trước/sau,Rủi ro điểm mù góc nghiêng khi chuyển làn hoặc rẽ trái cần mẫu biên méo nặng
+right,normal,25,Nhầm lẫn người đi bộ trên vỉa hè với người chuẩn bị bước xuống lòng đường,Đường cơ sở quan sát lề đường bên phải phục vụ căn lề đỗ xe
+right,hard,20,Vật cản thấp sát lề đường người đi bộ băng qua đường bất ngờ biến dạng góc seam trước/phải,Bảo vệ người tham gia giao thông yếu thế và tránh cọ quẹt mâm lốp vào vỉa hè khi đỗ song song
